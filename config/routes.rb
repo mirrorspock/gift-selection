@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, param: :unique_code
+  get 'thank_you' => 'users#thanks', as: 'thanks'
+  # get 'expired' => 'quotes#expired', as: 'expired'
+  # root 'users#entry'
 end

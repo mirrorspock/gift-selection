@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+Please select:
+
+<%= form_for @user, data: { confirm: 'confirm tekst' } do |f| %>
+  <%= f.radio_button :choice, '1' %> 
+  <%= label :choice_1, 'Bol.com' %>
+  <%= f.radio_button :choice, '2' %>
+  <%= label :choice_2, '20 zweepslagen van Ivonne' %>
+  <%= f.submit %>
+<% end %>
