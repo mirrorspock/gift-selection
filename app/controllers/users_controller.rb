@@ -1,11 +1,15 @@
 class UsersController < ApplicationController
 
   def index
+    if params[:unique_code]
+      redirect_to user_path(unique_code: params[:unique_code])
+    end  
+    
     @users = User.all
   end
 
   def show
-    #TODO check if already saved
+    #TODO check if already saved or wrong code
     @user = User.where(unique_code: params[:unique_code]).first
     
   end

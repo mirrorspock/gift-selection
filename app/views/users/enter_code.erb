@@ -1,0 +1,5 @@
+<%= form_tag(users_path, method: "get") do %>
+  <%= label_tag(:unique_code, "Enter gift code:") %>
+  <%= text_field_tag(:unique_code) %>
+  <%= submit_tag("Enter") %>
+<% end %>
