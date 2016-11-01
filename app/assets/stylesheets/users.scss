@@ -1,3 +1,39 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body { background: white; }
+
+body > form {
+  background: blue;
+  display: block;
+  height: 177px;
+  width: 480px;
+  align: center;
+}
+
+#unique_code { 
+  display: inline-block;
+  width: 400px;
+  
+  font-size: 60px;
+  font-family: HelveticaNeue-Thin, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body > form > input[type="submit"]:nth-child(4) {
+  
+  background: yellow;
+  
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}

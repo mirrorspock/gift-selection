@@ -10,18 +10,29 @@
   <%= @user.email %>
 </p>
 
-Please select:
-
-<%= form_for @user, data: { confirm: 'confirm tekst' } do |f| %>
-  <%= f.radio_button :choice, '1' %> 
-  <%= label :choice_1, 'Bol.com' %>
-  <%= f.radio_button :choice, '2' %>
-  <%= label :choice_2, '20 zweepslagen van Ivonne' %>
-  <%= f.radio_button :choice, '3' %>
-  <%= label :choice_3, 'stevige handdruk' %>
-  <%= f.radio_button :choice, '4' %>
-  <%= label :choice_4, 'bon voor Lego' %>
-  <%= f.radio_button :choice, '5' %>
-  <%= label :choice_5, 'auto van de zaak' %>
-  <%= f.submit %>
-<% end %>
+<div>
+  Please select:
+  <%= form_for @user, data: { confirm: 'confirm tekst' } do |f| %>
+    <label>
+      <%= f.radio_button :choice, '1' %>
+      <img src="http://placehold.it/350x150/35d/fff&text=Bol.com">
+    </label>
+    <label>
+      <%= f.radio_button :choice, '2' %>
+      <img src="http://placehold.it/350x150/35d/fff&text=Zweepslagen">
+    </label>
+    <label>
+      <%= f.radio_button :choice, '3' %>
+      <img src="http://placehold.it/350x150/35d/fff&text=Handdruk">
+    </label>
+    <label>
+      <%= f.radio_button :choice, '4' %>
+      <img src="http://placehold.it/350x150/35d/fff&text=LEGO%20bon">
+    </label>
+    <label>
+      <%= f.radio_button :choice, '5' %>
+      <img src="http://placehold.it/350x150/35d/fff&text=Auto">
+    </label>
+    <%= f.submit %>
+  <% end %>
+</div>
