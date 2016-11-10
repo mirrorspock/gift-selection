@@ -6,8 +6,10 @@ class UsersController < ApplicationController
   def index
     if params[:unique_code]
       redirect_to user_path(unique_code: params[:unique_code])
+    else
+      redirect_to root_url
     end  
-    @users = User.all
+    # @users = User.all
   end
 
   def show
