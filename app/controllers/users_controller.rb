@@ -1,17 +1,21 @@
 class UsersController < ApplicationController
 
+  # http_basic_authenticate_with name: "hr", password: "secret", except: [:index, :show]
+
+
   def index
     if params[:unique_code]
       redirect_to user_path(unique_code: params[:unique_code])
     end  
-    
     @users = User.all
   end
 
   def show
     #TODO check if already saved or wrong code
     @user = User.where(unique_code: params[:unique_code]).first
-    
+    if @user.nil? then
+      redirect_to root_url
+    end
   end
 
   # PATCH/PUT /users/1
