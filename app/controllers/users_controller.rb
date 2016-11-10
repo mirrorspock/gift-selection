@@ -19,7 +19,7 @@ class UsersController < ApplicationController
   def update
     @user = User.where(unique_code: params[:unique_code]).first
     respond_to do |format|
-      if @user.update choice: params[:user][:choice].to_i
+      if @user.update choice: params[:user][:choice]
         format.html { redirect_to thanks_url, notice: "Keuze #{params[:user][:choice]} is opgeslagen " }
       else
         format.html { render :edit }

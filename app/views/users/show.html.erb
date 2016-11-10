@@ -1,38 +1,38 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
+  Welkom 
+  <%= @user.name %>,
+  <br />
+  Klik op de cadeaukaart van je keuze. Vergeet niet te bevestigen met de knop beneden.
 </p>
 
 <div>
-  Please select:
-  <%= form_for @user, data: { confirm: 'confirm tekst' } do |f| %>
+  <%= form_for @user do |f| %>
     <label>
-      <%= f.radio_button :choice, '1' %>
-      <img src="http://placehold.it/350x150/35d/fff&text=Bol.com">
+      <%= f.radio_button :choice, 'bol' %>
+      <img width=25% height=25% src="/images/bol.png">
     </label>
     <label>
-      <%= f.radio_button :choice, '2' %>
-      <img src="http://placehold.it/350x150/35d/fff&text=Zweepslagen">
+      <%= f.radio_button :choice, 'ici' %>
+      <img width=25% height=25% src="/images/iciparis.png">
     </label>
     <label>
-      <%= f.radio_button :choice, '3' %>
-      <img src="http://placehold.it/350x150/35d/fff&text=Handdruk">
+      <%= f.radio_button :choice, 'podium' %>
+      <img width=25% height=25% src="/images/podium.jpeg">
     </label>
     <label>
-      <%= f.radio_button :choice, '4' %>
-      <img src="http://placehold.it/350x150/35d/fff&text=LEGO%20bon">
+      <%= f.radio_button :choice, 'zalando' %>
+      <img width=25% height=25% src="/images/zalando.png">
     </label>
     <label>
-      <%= f.radio_button :choice, '5' %>
-      <img src="http://placehold.it/350x150/35d/fff&text=Auto">
+      <%= f.radio_button :choice, 'hema' %>
+      <img width=25% height=25% src="/images/hema.jpeg">
     </label>
-    <%= f.submit %>
-  <% end %>
+    <label>
+      <%= f.radio_button :choice, 'karwei' %>
+      <img width=25% height=25% src="/images/karwei.png">
+    </label>
 </div>
+  <%= f.submit "Bevestig keuze"%>
+  <% end %>

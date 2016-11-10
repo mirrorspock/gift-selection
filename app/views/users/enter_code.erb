@@ -1,5 +1,12 @@
+<div id='code_note'>
+
+
+<p>Beste collega, <br />
+Welkom op de Seacon kerst pagina! Hier kun je zelf een keuze maken voor jouw kerstgeschenk 2016. <br />
+Je hebt een persoonlijke code ontvangen, vul deze hier beneden in: (let op! hooflettergevoelig) 
+</p>
+ </div>
 <%= form_tag(users_path, method: "get") do %>
-  <%= label_tag(:unique_code, "Enter gift code:") %>
   <%= text_field_tag(:unique_code) %>
   <%= submit_tag("Enter") %>
 <% end %>

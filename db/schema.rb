@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20161011104230) do
     t.string   "name"
     t.string   "email"
     t.text     "unique_code"
-    t.integer  "choice"
+    t.string   "choice"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
