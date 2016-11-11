@@ -23,8 +23,13 @@ class UsersController < ApplicationController
     @user = User.where(unique_code: params[:unique_code]).first
     if @user.nil? then
       redirect_to root_url, notice: "Onbekende code"
+      return
     end
-
+    if @user.choice then
+      redirect_to root_url, notice: "Code reeds gebruikt"
+      return
+    end
+    
   end
 
   # PATCH/PUT /users/1
