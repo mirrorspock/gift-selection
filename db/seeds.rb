@@ -291,5 +291,10 @@
   "Jeu Craenmehr"
 
 ].each do |collega|
-  User.create!(name: collega,unique_code:Digest::MD5.hexdigest(Time.now.to_s + rand(999).to_s)[0..7])
+  token = Digest::MD5.hexdigest(Time.now.to_s + collega + rand(999).to_s)[0..7]
+
+  while User.find_by_unique_code(token) != nil
+    token = Digest::MD5.hexdigest(Time.now.to_s + collega + rand(999).to_s)[0..7]
   end
+  User.create!(name: collega, unique_code: token)
+end
