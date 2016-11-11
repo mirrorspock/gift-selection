@@ -26,7 +26,8 @@ class UsersController < ApplicationController
       return
     end
     if @user.choice then
-      redirect_to root_url, notice: "Code reeds gebruikt"
+      
+      redirect_to root_url, notice: "Code reeds gebruikt, keuze: #{@user.choice} kan niet veranderd worden."
       return
     end
     
