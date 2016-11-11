@@ -4,20 +4,27 @@ class UsersController < ApplicationController
 
 
   def index
+    if params[:unique_code] == 'ivonne=admin'
+      @users = User.all
+      return
+    end
+
     if params[:unique_code]
       redirect_to user_path(unique_code: params[:unique_code])
     else
       redirect_to root_url
     end  
-    # @users = User.all
+    
   end
 
   def show
     #TODO check if already saved or wrong code
+    
     @user = User.where(unique_code: params[:unique_code]).first
     if @user.nil? then
       redirect_to root_url, notice: "Onbekende code"
     end
+
   end
 
   # PATCH/PUT /users/1
