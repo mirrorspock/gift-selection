@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     #TODO check if already saved or wrong code
     @user = User.where(unique_code: params[:unique_code]).first
     if @user.nil? then
-      redirect_to root_url
+      redirect_to root_url, notice: "Onbekende code"
     end
   end
 
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
     @user = User.where(unique_code: params[:unique_code]).first
     respond_to do |format|
       if @user.update choice: params[:user][:choice]
-        format.html { redirect_to thanks_url, notice: "Keuze #{params[:user][:choice]} is opgeslagen " }
+        format.html { redirect_to thanks_url, notice: "#{params[:user][:choice]}.png"}
       else
         format.html { render :edit }
       end

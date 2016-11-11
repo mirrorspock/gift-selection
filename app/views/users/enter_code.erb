@@ -1,3 +1,4 @@
+<p id="notice"><%= notice %></p>
 <div id='code_note'>
 
 
@@ -8,5 +9,6 @@ Je hebt een persoonlijke code ontvangen, vul deze hier beneden in: (let op! hoof
  </div>
 <%= form_tag(users_path, method: "get") do %>
   <%= text_field_tag(:unique_code) %>
+  <br />
   <%= submit_tag("Enter") %>
 <% end %>

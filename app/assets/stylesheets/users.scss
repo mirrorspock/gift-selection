@@ -2,28 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body { background: white; }
+body { 
+  background: gray; 
+  background-image: url('/images/bg-blue.png');
+}
 
+#container {
+ background: white; 
+ width: 700px;
+ margin-left: 100px;
+}
 body > form {
-  background: white;
+  background: blue;
   display: block;
   height: 177px;
   width: 480px;
   align: center;
 }
 
+#code_note p {
+	font-size:20px;
+  line-height: 30px;
+  padding: 10px;  
+}
 #unique_code { 
   display: inline-block;
-  width: 400px;
-  
-  font-size: 60px;
+  width: 600px;
+  margin-left: 50px;
+  font-size: 80px;
   font-family: HelveticaNeue-Thin, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-body > form > input[type="submit"]:nth-child(4) {
+input[type="submit"]{  
+  margin-left: 200px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
   
-  background: yellow;
-  
+	background-color:#599bb3;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	font-weight:bold;
+	padding:17px 61px;
+	text-decoration:none;
+
+}
+.thumb {
+width: 30%;  
 }
 
 label > input{ /* HIDE RADIO */

@@ -1,37 +1,37 @@
 <p id="notice"><%= notice %></p>
-
+<div id='code_note'>
 <p>
   Welkom 
   <%= @user.name %>,
   <br />
   Klik op de cadeaukaart van je keuze. Vergeet niet te bevestigen met de knop beneden.
 </p>
-
+</div>
 <div>
   <%= form_for @user do |f| %>
     <label>
       <%= f.radio_button :choice, 'bol' %>
-      <img width=25% height=25% src="/images/bol.png">
+      <img class='thumb' src="/images/bol.png">
     </label>
     <label>
-      <%= f.radio_button :choice, 'ici' %>
-      <img width=25% height=25% src="/images/iciparis.png">
+      <%= f.radio_button :choice, 'iciparis' %>
+      <img class='thumb'  src="/images/iciparis.png">
     </label>
     <label>
       <%= f.radio_button :choice, 'podium' %>
-      <img width=25% height=25% src="/images/podium.jpeg">
+      <img class='thumb'  src="/images/podium.png">
     </label>
     <label>
       <%= f.radio_button :choice, 'zalando' %>
-      <img width=25% height=25% src="/images/zalando.png">
+      <img class='thumb'  src="/images/zalando.png">
     </label>
     <label>
       <%= f.radio_button :choice, 'hema' %>
-      <img width=25% height=25% src="/images/hema.jpeg">
+      <img class='thumb'  src="/images/hema.png">
     </label>
     <label>
       <%= f.radio_button :choice, 'karwei' %>
-      <img width=25% height=25% src="/images/karwei.png">
+      <img class='thumb'  src="/images/karwei.png">
     </label>
 </div>
   <%= f.submit "Bevestig keuze"%>
