@@ -6,7 +6,13 @@ body {
   background: gray; 
   background-image: url('/images/bg-blue.png');
 }
-
+#banner {
+  width: 800px;
+  height:100px;
+  margin-left: 10px;
+  background-image: url('/images/seacon-logo.png');
+  background-repeat: no-repeat;
+}
 #container {
  background: white; 
  width: 800px;
